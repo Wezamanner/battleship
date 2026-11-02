@@ -1,3 +1,4 @@
+import { ManifestPlugin } from 'webpack';
 import Gameboard from '../src/gameboard'
 import Ship from '../src/ship';
 describe(`Gameboard`, ()=>{
@@ -80,5 +81,16 @@ describe(`Gameboard`, ()=>{
              const gameboard = new Gameboard();
           const ship = new Ship(3);
           expect(gameboard.placeShip(ship,[[1, 1], [1, 4], [1, 3]])).toBe(false)
+        })
+        test(`all sunk test`,()=>{
+           const gameboard = new Gameboard();
+          const ship = new Ship(2);
+          const ship2 = new Ship(1);
+           gameboard.placeShip(ship,[[2, 3], [2, 4]]);
+           gameboard.placeShip(ship2,[[3,3]])
+            gameboard.attack([2,4])
+            gameboard.attack([2,3])
+            gameboard.attack([3,3])
+             expect(gameboard.allShipsSunk()).toBe(true);
         })
 })

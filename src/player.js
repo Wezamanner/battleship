@@ -40,11 +40,18 @@ placeShipRandomly(){
     for(const ship of this.ships){
         let placementSuccesfull= false;
         while(!placementSuccesfull){
-        let temp= this.generateCoordinate(this)
-        let horizontalCheck= Math.floor(Math.random()*2)
-        if(horizontalCheck==0){
-        }else{
+            let temp=[]
+            let horizontalCheck= Math.floor(Math.random()*2)
+            if(horizontalCheck==0){
+            temp[0]= Math.floor(Math.random()*(8-ship.length+1))
+            temp[1]=Math.floor(Math.random()*8)
+               for(let i =0;i<ship.length;i++){
             
+             coordinates.push([temp[0]+i,temp[1]])
+            }
+        }else{
+            temp[0]=Math.floor(Math.random()*8)
+            temp[1]= Math.floor(Math.random()*(8-ship.length+1))
             for(let i =0;i<ship.length;i++){
             
              coordinates.push([temp[0],temp[1]+i])
