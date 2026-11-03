@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "mode":"development",
   "scripts": {
     "build": "webpack",
     "dev": "webpack serve --open",
@@ -16,6 +17,7 @@
   },
   "author": "wezir",
   "license": "ISC",
+  "type": "module",
   "bugs": {
     "url": "https://github.com/Wezamanner/todo/issues"
   },

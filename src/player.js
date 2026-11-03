@@ -1,8 +1,8 @@
-import Gameboard from "./gameboard";
-import Ship from "./ship";
+import Gameboard from "./gameboard.js";
+import Ship from "./ship.js";
 export default class Player {
     constructor(role) {
-        this.role = role;
+        this.role = role.toLowerCase();
         this.gameBoard=new Gameboard();
         this.ships=[
             new Ship(5),
