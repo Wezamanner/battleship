@@ -11,7 +11,7 @@ export default class Player {
             new Ship(3),
           new Ship(2)
         ]
-        // Your turn: what property should store the player's gameboard?
+       
     }
     attack(position,player){
         player.gameBoard.attack(position)

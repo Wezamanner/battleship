@@ -1,6 +1,7 @@
 .game-container {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 60px;
 }
 
@@ -19,4 +20,17 @@
 }
 .cell.ship {
     background-color: gray;
+}
+.cell.hit {
+    background-color: red;
+}
+
+.cell.miss {
+    background-color: lightblue;
+}
+@media (max-width:760px) {
+    .game-container {
+        display: flex;
+        flex-direction: column;
+    }
 }
